@@ -576,6 +576,7 @@ void SetTitle(HWND hwnd, string title);
 
 ## 3.历史
 
-1.0 - 2024.12.4
+1.0 - 2024.12.4\
 实现了PeekBoxSet模块以及EasyCodingInput模块，但是PeekBoxSet模块由于实用性很低，在2.0中移除。
 
+By MrJayden.
