@@ -99,12 +99,12 @@ public:
 
 extern EasyFileManager *easyFileManager;
 
-class EasyCilpBoardManager
+class EasyCilpboardManager
 {
     friend __Easy_ManagersInitializer::__Easy_ManagersInitializer();
 
 protected:
-    EasyCilpBoardManager() = default;
+    EasyCilpboardManager() = default;
 
 public:
     string Get();
@@ -113,7 +113,7 @@ public:
     bool Empty();
 };
 
-extern EasyCilpBoardManager *easyCilpBoardManager;
+extern EasyCilpboardManager *easyCilpboardManager;
 
 class EasyMouseManager
 {

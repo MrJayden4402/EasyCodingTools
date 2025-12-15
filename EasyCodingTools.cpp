@@ -86,7 +86,7 @@ __Easy_ManagersInitializer __easyManagersInitializer;
 
 EasyProcessManager *easyProcessManager;
 EasyFileManager *easyFileManager;
-EasyCilpBoardManager *easyCilpBoardManager;
+EasyCilpboardManager *easyCilpboardManager;
 EasyMouseManager *easyMouseManager;
 EasyKeyboardManager *easyKeyboardManager;
 EasyWindowManager *easyWindowManager;
@@ -99,7 +99,7 @@ __Easy_ManagersInitializer::__Easy_ManagersInitializer()
 
     easyProcessManager = new EasyProcessManager();
     easyFileManager = new EasyFileManager();
-    easyCilpBoardManager = new EasyCilpBoardManager();
+    EasyCilpboardManager = new EasyCilpboardManager();
     easyMouseManager = new EasyMouseManager();
     easyKeyboardManager = new EasyKeyboardManager();
     easyWindowManager = new EasyWindowManager();
@@ -417,7 +417,7 @@ bool EasyFileManager::ListFolder(string path, EasyFileManager::FolderChildList &
     return true;
 }
 
-string EasyCilpBoardManager::Get()
+string EasyCilpboardManager::Get()
 {
     if (!OpenClipboard(nullptr))
         return "";
@@ -444,7 +444,7 @@ string EasyCilpBoardManager::Get()
 
     return result;
 }
-bool EasyCilpBoardManager::Set(string text)
+bool EasyCilpboardManager::Set(string text)
 {
     if (!OpenClipboard(nullptr))
         return false;
@@ -467,7 +467,7 @@ bool EasyCilpBoardManager::Set(string text)
     CloseClipboard();
     return true;
 }
-bool EasyCilpBoardManager::Clear()
+bool EasyCilpboardManager::Clear()
 {
     if (!OpenClipboard(nullptr))
         return false;
@@ -475,7 +475,7 @@ bool EasyCilpBoardManager::Clear()
     CloseClipboard();
     return true;
 }
-bool EasyCilpBoardManager::Empty()
+bool EasyCilpboardManager::Empty()
 {
     return this->Get().empty();
 }
